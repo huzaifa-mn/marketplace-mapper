@@ -1,0 +1,73 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model MarketplaceTemplate {
+  id           Int                    @id @default(autoincrement())
+  name         String                 @unique // one template per name
+  originalPath String?
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @updatedAt
+  attributes   MarketplaceAttribute[]
+  mappings     Mapping[]
+}
+
+model MarketplaceAttribute {
+  id                    Int     @id @default(autoincrement())
+  marketplaceTemplateId Int
+  name                  String
+  dataType              String?
+
+  template     MarketplaceTemplate @relation(fields: [marketplaceTemplateId], references: [id], onDelete: Cascade)
+  mappingItems MappingItem[]
+
+  /// Ensure attribute name is unique per template, but can repeat across templates
+  @@unique([marketplaceTemplateId, name])
+}
+
+model SellerFile {
+  id         Int       @id @default(autoincrement())
+  fileName   String
+  storedPath String
+  columns    String[]
+  sampleRows Json
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  mappings   Mapping[]
+}
+
+model Mapping {
+  id                    Int      @id @default(autoincrement())
+  marketplaceTemplateId Int
+  sellerFileId          Int
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  marketplaceTemplate MarketplaceTemplate @relation(fields: [marketplaceTemplateId], references: [id], onDelete: Cascade)
+  sellerFile          SellerFile          @relation(fields: [sellerFileId], references: [id], onDelete: Cascade)
+  items               MappingItem[]
+
+  /// Optional: prevent duplicate mapping records for the same pair
+  @@unique([marketplaceTemplateId, sellerFileId])
+}
+
+model MappingItem {
+  id                     Int    @id @default(autoincrement())
+  mappingId              Int
+  marketplaceAttributeId Int
+  sellerColumnName       String
+
+  mapping   Mapping              @relation(fields: [mappingId], references: [id], onDelete: Cascade)
+  attribute MarketplaceAttribute @relation(fields: [marketplaceAttributeId], references: [id], onDelete: Cascade)
+
+  /// If you also want each seller column used at most once per mapping, enable this:
+  // @@unique([mappingId, sellerColumnName])
+
+  /// Each marketplace attribute can be mapped at most once within a given mapping
+  @@unique([mappingId, marketplaceAttributeId])
+}

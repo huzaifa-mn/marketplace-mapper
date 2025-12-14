@@ -1,0 +1,47 @@
+{
+  "name": "marketplace_backend",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "echo \"Open http://localhost:3000/api/docs in your browser\"",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch \"src/**/*.ts\" --exec ts-node src/server.ts",
+    "dev:build": "nodemon dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "@prisma/extension-accelerate": "^3.0.1",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "module-alias": "^2.2.3",
+    "moment-timezone": "^0.6.0",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.11",
+    "pino": "^10.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "xlsx": "^0.18.5",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/csv-parse": "^1.1.12",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "prisma": "^6.19.0"
+  }
+}

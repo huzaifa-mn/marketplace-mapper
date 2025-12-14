@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # ==============================================================================
+  # Database Service (PostgreSQL)
+  # ==============================================================================
+  db:
+    image: postgres:15-alpine
+    container_name: marketplace-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: marketplace
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # ==============================================================================
+  # Backend Service (Express + Prisma)
+  # ==============================================================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: marketplace-backend
+    ports:
+      - "4000:4000" # Expose API to host
+    environment:
+      - PORT=4000
+      - FRONTEND_URL=http://localhost:3000
+      # Connect to the local dockerized database
+      - DIRECT_URL=postgresql://postgres:password@db:5432/marketplace
+      - DATABASE_URL=postgresql://postgres:password@db:5432/marketplace
+    volumes:
+      - ./backend/uploads:/app/uploads
+    depends_on:
+      - db
+    # Run migrations on startup to prepare DB
+    command: >
+      sh -c "npx prisma migrate deploy && npm start"
+
+  # ==============================================================================
+  # Frontend Service (Next.js)
+  # ==============================================================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: marketplace-frontend
+    ports:
+      - "3000:3000" # Expose Frontend to host
+    environment:
+      - INTERNAL_API_BASE_URL=http://backend:4000
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
