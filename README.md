@@ -35,7 +35,7 @@ Run the following commands to start the server:
 ```bash
 cd backend
 npm install
-npx prisma migrate dev --name setup # To use the schema from ptidms orm 
+npx prisma migrate dev --name setup # To use the schema from prisma orm 
 npx prisma generate
 npm run build && npm run start
 ```
