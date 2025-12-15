@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## 📽️ Loom Video
+https://www.loom.com/share/be41c802ce1a4d1daeb5e424aab238c7
+
 ## 🚀 Quick Start with Docker (Recommended)
 
 Run the full stack (Frontend + Backend + Database) with one command.
@@ -61,3 +64,4 @@ Access the frontend at: http://localhost:3000
 ## Tech stack
 ### Frontend: Next.js, Tailwind, Axios, Shadcn-ui, Zustand, Tanstack React Query
 ### Backend: Node, Express, Typescript, Prisma ORM, Supabase (PostgreSQL)
+
