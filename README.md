@@ -117,7 +117,7 @@ The application uses PostgreSQL with Prisma ORM. Here's the data model:
 ## Tech stack
 
 ### Frontend
-- Next.js 14 (App Router)
+- Next.js 15.5.2 (App Router)
 - Tailwind CSS
 - Shadcn/ui
 - Zustand (state management)
